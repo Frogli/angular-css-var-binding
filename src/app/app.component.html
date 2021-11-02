@@ -1,0 +1,21 @@
+<button
+  *ngFor="let item of items; index as index"
+  [style.--animation-delay]="index * 0.2 + 's'"
+>
+  {{ item }}
+</button>
+
+<app-exmaple [color]="color"></app-exmaple>
+
+<hr />
+
+<button
+  *ngFor="let item of items; index as index"
+  bindCssVariable="animation-delay"
+  [bindCssVariableValue]="index * 0.2 + 's'"
+>
+  {{ item }}
+</button>
+
+<button (click)="color = 'blue'">change color</button>
+<div *ngIf="divIshidden">can be hidden</div>
